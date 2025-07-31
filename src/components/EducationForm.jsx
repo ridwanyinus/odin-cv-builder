@@ -9,7 +9,6 @@ const EducationForm = () => {
 	const handleEducationChange = (e) => {
 		const { value, name, dataset } = e.target;
 		const index = parseInt(dataset.index);
-
 		const updatedEducation = [...cvData.education];
 		updatedEducation[index][name] = value;
 		updateCVSection("education", updatedEducation);
@@ -39,19 +38,18 @@ const EducationForm = () => {
 				<GraduationCap />
 				Education
 			</h2>
-
 			{cvData.education.map((data, index) => (
-				<fieldset
+				<div
 					className="entry"
 					key={data.uuid}
-					aria-labelledby={`education-${index + 1}`}
+					role="group"
+					aria-labelledby={`education-title-${index}`}
 					tabIndex={-1}
 				>
-					<legend id={`education-${index}`} className="u-sr-only">
-						Education #{index + 1} entry
-					</legend>
 					<div className="entry__header">
-						<h4 className="entry__title">Education #{index + 1}</h4>
+						<h4 id={`education-title-${index}`} className="entry__title">
+							Education #{index + 1}
+						</h4>
 						<button
 							type="button"
 							className="entry__remove"
@@ -124,9 +122,8 @@ const EducationForm = () => {
 							/>
 						</div>
 					</div>
-				</fieldset>
+				</div>
 			))}
-
 			<div className="form__actions">
 				<button
 					type="button"
@@ -137,7 +134,6 @@ const EducationForm = () => {
 					Add Education
 				</button>
 			</div>
-
 			<div aria-live="polite" className="u-sr-only">
 				{announcement}
 			</div>

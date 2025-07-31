@@ -26,6 +26,7 @@ button:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 0;
 
+
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
@@ -36,6 +37,7 @@ button:focus-visible {
     overflow-y: auto;
     max-height: 100vh;
     border-right: 1px solid var(--gray-200);
+
 
     @media (max-width: 1024px) {
       border-right: none;
@@ -63,4 +65,3 @@ button:focus-visible {
     text-align: center;
   }
 }
-
