@@ -1,0 +1,32 @@
+@use '../globals/variables' as *;
+
+.section {
+  margin-bottom: 32px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $gray-800;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid $gray-200;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &--personal svg {
+      color: $primary-color;
+    }
+
+    &--education svg {
+      color: $success-color;
+    }
+
+    &--experience svg {
+      color: $warning-color;
+    }
+  }
+}

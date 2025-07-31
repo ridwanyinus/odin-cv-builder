@@ -1,0 +1,54 @@
+@use '../globals/variables' as *;
+@use 'sass:color';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: #1d4ed8;
+    }
+  }
+
+  &--secondary {
+    background-color: $gray-100;
+    color: $gray-700;
+    border: 1px solid $gray-300;
+
+    &:hover {
+      background-color: $gray-200;
+    }
+  }
+
+  &--success {
+    background-color: $success-color;
+    color: white;
+
+    &:hover {
+      background-color: #15803d;
+    }
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
